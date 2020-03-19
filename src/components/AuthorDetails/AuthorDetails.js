@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import IconButton from '../IconButton/IconButton'
-import { faPlus, faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons'
+import { faPlus, faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons';
+
+import IconButton from '../IconButton/IconButton';
+import BookThumb from '../BookThumb/BookThumb';
 
 export default function AuthorDetails({ author: { fullName, birthYear, deathYear, born, books } }) {
     const [expanded, setExpanded] = useState(false);
@@ -29,8 +31,9 @@ export default function AuthorDetails({ author: { fullName, birthYear, deathYear
             }
             
             { !expanded && books.slice(0,5).map(book => (
-                <div className="cover">
-                </div>
+                <BookThumb book={book} />
+                // <div className="cover">
+                // </div>
             ))}
 
             { expanded && books.map(book => (

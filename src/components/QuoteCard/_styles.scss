@@ -11,8 +11,7 @@
         }
     }
     .text {
+        @extend .paragraph-text;
         font-style: italic;
-        font-size: 14px;
-        letter-spacing: 0.5px;
     }
 }

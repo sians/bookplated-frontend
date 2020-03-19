@@ -2,6 +2,8 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 
 import AuthorDetails from '../AuthorDetails/AuthorDetails';
+import { bookThumbReadData, bookThumbUnreadData } from '../BookThumb/BookThumb.stories';
+
 
 export default {
   component: AuthorDetails,
@@ -15,7 +17,7 @@ export const defaultData = {
   birthYear: 1962,
   deathYear: 2008,
   born: "California, USA",
-  books: ["Infinite Jest", "Consider The Lobster", "The Pale King"]
+  books: [bookThumbReadData, bookThumbUnreadData]
 };
 
 export const noBooksData = {

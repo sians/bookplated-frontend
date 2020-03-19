@@ -1,0 +1,10 @@
+.tabs {
+    .tab-list {
+        display: flex;
+        border-bottom: 1px solid $light-blue;
+    }
+    .tab-content {
+        @extend .paragraph-text;
+        margin-top: 50px;
+    }
+}
