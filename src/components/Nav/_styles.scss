@@ -1,0 +1,23 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $light-blue;
+    color: $dark-blue;
+    height: 50px;
+    .logo {
+        font-family: "Rockwell";
+        font-size: 1.3rem;
+        border-left: solid 4px $dark-blue;
+        height: 35px;
+        padding: 15px 0px 0px 15px;
+    }
+    ul {
+        display: flex;
+        justify-content: end;
+        li {
+            margin: 10px;
+        }
+    }
+}
+
