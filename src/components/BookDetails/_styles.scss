@@ -1,0 +1,48 @@
+.book-details  {
+    padding: 40px 10px;
+    width: 710px;
+    .head-details {
+        h2 { 
+            @extend .header-text;
+            text-align: right;
+            padding-bottom: 5px;
+        }
+        .bar {
+            @extend .italic-sub-headers;
+            display: flex;
+            border-bottom: solid 1px $light-blue;
+            justify-content: flex-end;
+            padding-bottom: 15px;
+            margin-left: 15px;
+        }
+    }
+    .body-details {
+        display: flex;
+        padding: 15px 0px;
+        .cover-image {
+            height: 280px;
+            min-width: 200px;
+            background-color: $light-blue;
+            background-size: cover;
+        }
+        .info {
+            margin: 0px 20px;
+            min-width: 130px;
+            text-align: right;
+            li {
+                margin-bottom: 20px;
+            }
+            h6 {
+                font-size: 16px;
+                letter-spacing: 0.5px;
+            }
+        }
+        .blurb{
+            @extend .paragraph-text;
+            .placeholder-blurb {
+                font-style: italic;
+                color: rgba(black, 0.3);
+            }
+        }
+    }
+}

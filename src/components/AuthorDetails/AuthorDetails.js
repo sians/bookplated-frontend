@@ -37,8 +37,10 @@ export default function AuthorDetails({ author: { fullName, birthYear, deathYear
             ))}
 
             { expanded && books.map(book => (
-                <div className="cover">
-                </div>
+                <BookThumb book={book} />
+
+                // <div className="cover">
+                // </div>
             ))}
         </div>
         <div className="caret-row">

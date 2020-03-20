@@ -11,14 +11,14 @@ export default {
 };
 
 export const bookThumbReadData = {
-    cover_url: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1446876799l/6759.jpg",
+    coverUrl: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1446876799l/6759.jpg",
     title: "Infinite Jest",
     read: new Date,
     owned: true
 }
 
 export const bookThumbUnreadData = {
-    cover_url: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388854217l/6751.jpg",
+    coverUrl: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388854217l/6751.jpg",
     title: "Consider The Lobster",
     read: null,
     owned: true
