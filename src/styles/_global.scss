@@ -1,7 +1,8 @@
 body {
     font-family: "questa-grande", serif;
     font-style: normal;
-    font-weight: "light";    
+    font-weight: "light";
+    margin: 0px;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, li {
@@ -11,4 +12,9 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 
 li {
     list-style: none;
+}
+
+.main-content {
+    width: 800px;
+    margin: auto;
 }
