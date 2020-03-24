@@ -1,25 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+
+import { actions as bookActions, selectors as bookSelectors } from '../../store/reducers/books'
 
 import BookList from './BookList/BookList'
 
 function Home({ }) {
-    const books = [
-        {
-            id: 1,
-            coverUrl: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1446876799l/6759.jpg",
-            title: "Infinite Jest",
-            read: new Date,
-            owned: true
-        },
-        {
-            id: 2,
-            coverUrl: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1388854217l/6751.jpg",
-            title: "Consider The Lobster",
-            read: null,
-            owned: true
-        }        
-    ]    
+    const dispatch = useDispatch()
+    const books = useSelector(bookSelectors.getBooks)
+    const isLoading = useSelector(bookSelectors.getBooksLoading)
+    const booksError = useSelector(bookSelectors.getBooksError)
+
+    useEffect(() => {
+        dispatch(bookActions.getBooks());
+      }, [])
 
     return (
         <div className="main-content">

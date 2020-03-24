@@ -1,17 +1,22 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux'
 
 import { faPlus, faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons';
+
+import { actions as bookActions, selectors as bookSelectors } from '../../store/reducers/books'
 
 import IconButton from '../IconButton/IconButton';
 import BookThumb from '../BookThumb/BookThumb';
 
-export default function AuthorDetails({ author: { fullName, birthYear, deathYear, born, books } }) {
+export default function AuthorDetails({ author: { fullName, birthYear, deathYear, born, bookIds } }) {
     const [expanded, setExpanded] = useState(false);
 
     const handleExpandClick = () => {
         setExpanded(!expanded);
     }
+
+    const books = useSelector(bookSelectors.getAuthorsBooks(bookIds))
 
     return (
     <div className="author-details">
@@ -61,5 +66,6 @@ AuthorDetails.propTypes = {
       birthYear: PropTypes.number,
       deathYear: PropTypes.number,
       born: PropTypes.string,
+      bookIds: PropTypes.arrayOf(String)
     }),
   };
