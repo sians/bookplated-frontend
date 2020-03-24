@@ -1,19 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux'
 
 import { faPlus, faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons';
+
+import { actions as authorActions, selectors as authorSelectors } from '../../store/reducers/authors'
 
 import IconButton from '../IconButton/IconButton';
 import BookThumb from '../BookThumb/BookThumb';
 
 export default function BookDetails({ book: {coverUrl, authors, title, published, numPages, isbn, read, owned, blurb } }) {
+    const author = useSelector(authorSelectors.getAuthor(authors[0]))
+
 
     return (
     <div className="book-details">
         <div className="head-details">
             <h2>{title}</h2>
             <div className="bar">
-                <span>{authors.join(",")}</span>
+                <span>{author.fullName}</span>
             </div>
         </div>
         <div className="body-details">

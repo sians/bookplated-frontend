@@ -3,13 +3,14 @@ import React from 'react';
 import BookThumb from '../../../components/BookThumb/BookThumb'
 
 function BookList({ books }) {
+    console.log(Object.keys(books))
 
     return (
         <div>
             <div className="book-list">
-                {books && books.map(book => (
+                {books && Object.entries(books).map(entry => (
                     // book.read &&
-                        <BookThumb book={book} />
+                        <BookThumb book={entry[1]} />
                     ))
                 }
             </div>
