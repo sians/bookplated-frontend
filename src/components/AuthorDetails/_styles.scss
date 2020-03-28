@@ -1,7 +1,10 @@
 .author-details  {
-    padding: 40px 10px;
     width: 710px;
     .details {
+        position: sticky;
+        top: 0px;
+        background-color: white;
+        padding-top:40px;        
         h2 { 
             @extend .header-text;
             text-align: right;

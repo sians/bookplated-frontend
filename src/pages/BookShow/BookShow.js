@@ -22,21 +22,6 @@ function BookShow({ }) {
     const book = useSelector(bookSelectors.getBook(id))
     const isLoading = useSelector(bookSelectors.getBookLoading)
     const bookError = useSelector(bookSelectors.getBookError)
-
-
-    const tabChildren = [
-        {
-            "label": "Quotes",
-            "data": [
-                "quote of some stuuuuuff",
-                "more quotes and clever  words",
-                "super clever quotes qoo hoo woo ba doo"],
-        },
-        {
-            "label": "Notes",
-            "data": ["1", "2", "3"],
-        }        
-    ]
     
     return (
         <div className="book-show-container">
@@ -45,7 +30,6 @@ function BookShow({ }) {
             <Link to={{pathname: '/author'}}>Author</Link>
             <button onClick={handleGoBack}>Go Back</button> */}
             <BookDetails book={book}/>
-            <Tabs children={tabChildren} />
         </div>
     );
 }
