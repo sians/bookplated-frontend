@@ -1,10 +1,13 @@
 .tabs {
+    min-height: 550px;
     .tab-list {
         display: flex;
+        position: sticky;
+        top: 116px;
+        background-color: white;
         border-bottom: 1px solid $light-blue;
     }
     .tab-content {
         @extend .paragraph-text;
-        margin-top: 50px;
     }
 }

@@ -5,6 +5,7 @@ import IconButton from '../IconButton/IconButton'
 import { faPlus, faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons'
 
 import Tab from './Tab/Tab'
+import QuoteCard from '../QuoteCard/QuoteCard'
 
 export default function Tabs({ children }) {
     const [activeTab, setActiveTab] = useState(children[0].label);
@@ -31,7 +32,8 @@ export default function Tabs({ children }) {
             <div className="tab-content">
             {children.map((child) => {
                 if (child.label !== activeTab) return undefined;
-                return child.data;
+                console.log(child)
+                return child.data.map(quote => <QuoteCard quote={quote} />);
             })}
             </div>
       </div>

@@ -1,7 +1,10 @@
 .book-details  {
-    padding: 40px 10px;
-    width: 710px;
+    width: 720px;
     .head-details {
+        position: sticky;
+        top: 0px;
+        background-color: white;
+        padding-top:40px;
         h2 { 
             @extend .header-text;
             text-align: right;
@@ -12,13 +15,21 @@
             display: flex;
             border-bottom: solid 1px $light-blue;
             justify-content: flex-end;
-            padding-bottom: 15px;
+            padding-bottom: 40px;
             margin-left: 15px;
+            a {
+                text-decoration: none;
+                color: black;
+                border-bottom: 3px solid transparent;
+                &:hover {
+                    border-bottom: 3px solid $dark-blue;
+                }
+            }
         }
     }
     .body-details {
         display: flex;
-        padding: 15px 0px;
+        padding: 40px 0px;
         .cover-image {
             height: 280px;
             min-width: 200px;

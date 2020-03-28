@@ -11,6 +11,7 @@
         border-left: solid 4px $dark-blue;
         height: 35px;
         padding: 15px 0px 0px 15px;
+
     }
     ul {
         display: flex;
@@ -35,6 +36,10 @@
         border-left: solid 4px $dark-blue;
         height: 35px;
         padding: 15px 0px 0px 15px;
+        a {
+            color: $dark-blue;
+            text-decoration: none;
+        }
     }
     ul {
         display: flex;

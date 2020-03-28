@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
+
 
 import IconButton from '../IconButton/IconButton'
 import { faPlus, faChartBar, faEllipsisH } from '@fortawesome/free-solid-svg-icons'
@@ -7,7 +9,11 @@ import { faPlus, faChartBar, faEllipsisH } from '@fortawesome/free-solid-svg-ico
 export default function Nav() {
   return (
     <div className="nav">
-      <div className="logo">bookplated</div>
+      <div className="logo">
+        <Link to={{pathname: '/'}}>
+          bookplated
+        </Link>
+      </div>
       <ul>
         <li>
             <IconButton faIcon={faPlus}  />
